@@ -35,7 +35,7 @@ nav{
 }
 
 .logo{
-    max-width: 80%;
+    width: 80%;
     height: auto;
     display: block;
 }
@@ -76,6 +76,7 @@ header p{
 
 .header-btn{
         background: linear-gradient(135deg, #F02AA6 0%, #FF6F48 100%);
+        font-size: 1em;
 }
 
 .header-btn:hover{
@@ -192,7 +193,7 @@ footer{
 }
 
 /* Tablet styles */
-@media only screen and (min-width: 768px) {
+@media only screen and (min-width: 650px) {
     body {
         font-size: 18px;
     }
@@ -201,6 +202,68 @@ footer{
         max-width: 900px;
         /*padding: 2rem;*/
     }
+
+    .nav-button{
+        font-size: 1em;
+    }
+
+    header{
+        padding: 1.5em;
+    }
+
+    .btn{
+        padding: 1em 2.4em;
+        border-radius: 50px;
+        border: none;
+        color: #fff;
+        border: none;
+    }
+
+      .header-flex{
+        flex-wrap: nowrap;
+        padding: 3em 2em;
+        margin-bottom: 60px;
+         position: relative;
+    }
+
+    .item{
+        flex-basis:328px ;
+    }
+
+
+    .left h1{
+        font-size: 2.3rem;
+        font-weight: 800;
+    }
+
+    .left p{
+        font-size: 1rem;
+        line-height: 1.5em;
+        color: #83869A;
+    }
+
+    #container picture{
+        width: 100%;
+        height: auto;
+        overflow: hidden;
+        
+    }
+
+    .hero-image{
+        width: 695px;
+       
+
+    }
+
+    /*-----main-----*/
+
+    .grid{
+        margin-top: 2em;
+        display: grid;
+        gap: 20px;
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
 }
 
 /* Desktop styles */
@@ -212,4 +275,6 @@ footer{
         max-width: 1440px;
         /*padding: 3rem;*/
     }
+
+  
 }
