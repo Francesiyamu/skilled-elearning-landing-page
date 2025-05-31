@@ -11,6 +11,7 @@ html, body {
     font-size: 16px;
     background: #fff;
     color: #222;
+    overflow-x: hidden;
 }
 
 #container {
@@ -18,7 +19,6 @@ html, body {
     min-width: 320px;
     margin: 0 auto;
     padding: 1em;
-      
 }
 
 nav{
@@ -64,6 +64,7 @@ nav{
     justify-content: center;
     align-items: center;
 }
+
 header h1{
     font-size: 1.9rem;
     margin-bottom: 1em;
@@ -75,7 +76,7 @@ header p{
 }
 
 .header-btn{
-        background: linear-gradient(135deg, #F02AA6 0%, #FF6F48 100%);
+        background: linear-gradient(180deg, #ff6f48 0%, #f02aa6 100%);
         font-size: 1em;
 }
 
@@ -113,7 +114,7 @@ main{
     padding: 0;
     border-radius: 10px ;
     width: 100%;
-    background: linear-gradient(135deg, #F02AA6 0%, #FF6F48 100%);
+    background: linear-gradient(180deg, #ff6f48 0%, #f02aa6 100%);
     color: #fff;
     padding: 1em;
     font-size: 1.5rem;
@@ -174,6 +175,7 @@ main{
 
 footer{
     background-color: #13183F;
+    width: 100%;
 }
 
 .footer{
@@ -183,12 +185,11 @@ footer{
 }
 
 .footer-btn{
-    background: linear-gradient(135deg, #F02AA6 0%, #4851FF 100%);
+    background: linear-gradient(180deg, #4851ff -54.32%, #f02aa6 100%);;
 }    
 
-.footer-btn:hover,
-.footer-btn:active{
-    background-color: #F02AA6;
+.footer-btn:hover{
+    opacity: 0.5;
     cursor: pointer;
 }
 
@@ -196,11 +197,17 @@ footer{
 @media only screen and (min-width: 650px) {
     body {
         font-size: 18px;
+        
     }
     
     #container {
         max-width: 900px;
         /*padding: 2rem;*/
+        position: relative;
+    }
+
+    nav{
+        justify-content: space-around;
     }
 
     .nav-button{
@@ -209,6 +216,7 @@ footer{
 
     header{
         padding: 1.5em;
+
     }
 
     .btn{
@@ -220,23 +228,23 @@ footer{
     }
 
       .header-flex{
-        flex-wrap: nowrap;
         padding: 3em 2em;
+        flex-wrap: nowrap;
         margin-bottom: 60px;
-         position: relative;
+        margin: 0 auto 5em;
     }
 
     .item{
-        flex-basis:328px ;
+        flex-basis:28em ;
     }
 
 
-    .left h1{
+    .item h1{
         font-size: 2.3rem;
         font-weight: 800;
     }
 
-    .left p{
+    .item p{
         font-size: 1rem;
         line-height: 1.5em;
         color: #83869A;
@@ -249,12 +257,16 @@ footer{
         
     }
 
-    .hero-image{
-        width: 695px;
-       
-
-    }
-
+    
+ .hero-image {
+    position: absolute;
+    top: -60px;
+    right: -200px;
+    width: 600px;      /* adjust as needed */
+    max-width: none;
+    z-index: 2;
+    display: block;
+}
     /*-----main-----*/
 
     .grid{
@@ -276,5 +288,40 @@ footer{
         /*padding: 3rem;*/
     }
 
+    nav{
+         justify-content: space-around
+    }
+
+    .logo{
+        width: 40%;
+    }
+
+    .header-flex {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        overflow: visible; /* allow overflow */
+        margin: 0 auto 15em;
+  }
+
+  .item{
+    flex-basis: 40em;
+  }
+    .grid{
+        grid-template-columns: repeat(3, 1fr)
+    }
   
+
+    .hero-image {
+        position: absolute;
+        top: -60px;
+        right: -12;
+        width: 60%;      /* adjust as needed */
+        z-index: 2;
+        display: block;
+    }
+
+    footer{
+        padding: 1em;
+    }
 }
