@@ -175,7 +175,7 @@ main{
 
 footer{
     background-color: #13183F;
-    width: 100%;
+   
 }
 
 .footer{
@@ -201,9 +201,9 @@ footer{
     }
     
     #container {
-        max-width: 900px;
-        /*padding: 2rem;*/
+        padding: 2rem;
         position: relative;
+
     }
 
     nav{
@@ -270,23 +270,22 @@ footer{
     /*-----main-----*/
 
     .grid{
-        margin-top: 2em;
         display: grid;
+        grid-template-columns: repeat(2, 1fr); /* or your desired columns */
+        height: 100%; /* or 100vh, or set the parent's height */
+        grid-auto-rows: 2fr; /* Each row takes equal available space */
         gap: 20px;
-        grid-template-columns: repeat(2, 1fr);
     }
     
 }
 
 /* Desktop styles */
-@media (min-width: 1024px) {
+@media (min-width: 1024px) and (max-width: 1440px){
     body {
         font-size: 20px;
     }
-    #container {
-        max-width: 1440px;
-        /*padding: 3rem;*/
-    }
+
+    
 
     nav{
          justify-content: space-around
@@ -301,12 +300,13 @@ footer{
         align-items: center;
         justify-content: space-between;
         overflow: visible; /* allow overflow */
-        margin: 0 auto 15em;
+        margin-bottom: 15em;
   }
 
   .item{
     flex-basis: 40em;
   }
+
     .grid{
         grid-template-columns: repeat(3, 1fr)
     }
@@ -325,3 +325,5 @@ footer{
         padding: 1em;
     }
 }
+
+
